@@ -1,8 +1,16 @@
-import React from 'react';
+
+import { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 const Saludo = ({saludo}) => {
+
+    const [saludoState, setSaludoState] = useState(saludo);
+
     return (
-        <h1 className='text-light'>Hello {saludo}</h1>
+        <div className='text-center'>
+            <h1 className='text-light mb-5'>Hello {saludoState}</h1>
+            <Button onClick={() => setSaludoState("my friend! (from state)")}>Clickiame</Button>
+        </div>
     );
 };
 
