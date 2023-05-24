@@ -1,11 +1,14 @@
 import './App.css'
+import Saludo from './components/Saludo';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
   return (
-    <>
-      <h1>proyecto react</h1>
-    </>
+    <div className='main bg-dark d-flex justify-content-center align-items-center'>
+      <Saludo saludo="my friend!"></Saludo>
+    </div>
+
   )
 }
 
